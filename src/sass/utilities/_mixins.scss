@@ -1,0 +1,10 @@
+@mixin arrows {
+	position: absolute;
+	bottom: -15%;
+	margin: 0 0 2em;
+	background: none;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	transform: translate(-40%, 0);
+	cursor: pointer;
+}

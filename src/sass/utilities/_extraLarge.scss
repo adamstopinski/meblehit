@@ -1,0 +1,105 @@
+@media (min-width: 1200px) {
+	.section-title {
+		font-size: 3.2rem;
+		letter-spacing: 1px;
+	}
+	//HEADER + NAWIGACJA
+	.header {
+		.nav {
+			&__wrapper {
+				max-width: 1200px;
+
+				img {
+					height: 60px;
+					width: 80px;
+				}
+			}
+			&__item {
+				position: relative;
+				padding: 1.5em 2.5em;
+				font-weight: bold;
+				color: $red;
+				border-radius: 8px;
+				text-decoration: none;
+				z-index: 100;
+				transition: color 0.3s, border 0.3s;
+
+				&:hover {
+					color: $gray;
+				}
+
+				// &-active {
+				// 	content: '';
+				// 	position: absolute;
+				// 	bottom: 20%;
+				// 	left: 50%;
+				// 	transform: translateX(-50%);
+				// 	margin: 0 auto;
+				// 	width: 40%;
+				// 	height: 3px;
+				// 	background-color: $gray;
+				// }
+			}
+		}
+	}
+	//O NAS
+	.about-us {
+		&__text {
+			padding: 4em 3em;
+
+			span {
+				font-size: 2.2rem;
+			}
+		}
+
+		&__hr {
+			margin: 3em auto;
+		}
+	}
+	//OFERTA
+	.offert {
+		&__brw {
+			margin-top: 8em;
+			padding: 4em 8em;
+		}
+		&__center {
+			&-card {
+				padding: 10px;
+				text-align: center;
+				transition: transform 0.3s;
+
+				&:hover {
+					transform: scale(0.95);
+				}
+
+				h3 {
+					padding-top: 1em;
+					color: $gray;
+				}
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	// KONTAKT
+	.contact {
+		&__box {
+			.ti {
+				font-size: 6rem;
+			}
+			p:nth-of-type(n + 1) {
+				font-size: 2.2rem;
+			}
+		}
+		&__facebook a {
+			font-size: 6rem;
+		}
+	}
+	// FOOTER
+	.footer {
+		padding: 2em 0;
+		font-size: 2rem;
+	}
+}

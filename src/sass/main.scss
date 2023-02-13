@@ -1,0 +1,545 @@
+@use 'utilities/reset';
+@use 'utilities/colors' as *;
+@use 'utilities/mixins' as *;
+
+html {
+	font-size: 62.5%;
+	scroll-padding-top: 79px;
+	scroll-behavior: smooth;
+}
+
+body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	font-family: 'Inter', sans-serif;
+	font-size: 1.6rem;
+	background-color: $dark;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.section-title {
+	display: block;
+	padding: 0.2em;
+	margin: 2em 0 2em;
+	font-size: 2.4rem;
+	font-weight: bold;
+	color: $red;
+	border-radius: 8px;
+	text-transform: uppercase;
+	cursor: default;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+	font-size: 4.5rem;
+	border-radius: 50%;
+	cursor: pointer;
+	padding: 0.4em;
+	&__link {
+		color: $darkest;
+		text-decoration: none;
+
+		.ti-arrow-up {
+			background-color: $blue;
+			border-radius: 50%;
+		}
+	}
+}
+.slick-slider {
+	.slick-prev {
+		@include arrows;
+		left: 40%;
+		border-left: 0 solid transparent;
+		border-right: 15px solid $gray;
+	}
+	.slick-next {
+		@include arrows;
+		right: 40%;
+		border-right: 0 solid transparent;
+		border-left: 15px solid $gray;
+	}
+}
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	padding: 2em 0;
+	list-style-type: none;
+
+	li {
+		margin: 0 0.5em;
+	}
+
+	button {
+		display: block;
+		width: 1rem;
+		height: 1rem;
+		padding: 0;
+
+		border: none;
+		border-radius: 50%;
+		background-color: $gray;
+
+		text-indent: -9999px;
+	}
+
+	li.slick-active button {
+		background-color: $red;
+	}
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+}
+
+hr {
+	margin: 50px auto 40px;
+	height: 1px;
+	width: 80%;
+	max-width: 800px;
+	border: 1px solid transparent;
+	background-color: $red;
+}
+
+//HEADER
+.header {
+	position: relative;
+	height: 50vh;
+
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		&-mobile {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			object-fit: cover;
+		}
+
+		&-desktop {
+			display: none;
+		}
+	}
+	&__shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+}
+
+//NAWIGACJA
+.nav {
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.85);
+	z-index: 2;
+
+	&--active {
+		position: fixed;
+		top: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100vh;
+		width: 100%;
+		font-size: 1.8rem;
+		z-index: 50;
+		background-color: $black;
+	}
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		width: 90%;
+		margin: auto;
+
+		.hamburger {
+			position: absolute;
+			top: 2.5em;
+			right: 1em;
+			transform: translateY(-50%);
+			z-index: 500;
+
+			&-inner,
+			&-inner::before,
+			&-inner::after {
+				background-color: $red;
+				z-index: 500;
+			}
+		}
+
+		img {
+			position: absolute;
+			top: 2.5em;
+			left: 2em;
+			transform: translateY(-50%);
+			height: 40px;
+			width: 45px;
+			border-radius: 12px;
+			background-color: $white;
+			cursor: pointer;
+			z-index: 500;
+		}
+	}
+
+	&__item {
+		visibility: hidden;
+
+		&--active {
+			padding: 2em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: bold;
+			color: $red;
+			text-decoration: none;
+			visibility: visible;
+			z-index: 100;
+		}
+	}
+}
+
+//O NAS
+.about-us {
+	padding-bottom: 3em;
+	height: auto;
+	width: 100%;
+	background-color: $darkest;
+
+	&__text {
+		padding: 2em 1em;
+		width: 80%;
+		font-size: 1.4rem;
+		border: 2px solid $red;
+		border-radius: 25px;
+		background-color: $gray;
+		text-align: left;
+		overflow: hidden;
+
+		span {
+			font-weight: bold;
+			font-size: 1.6rem;
+		}
+	}
+
+	&__hr {
+		margin: 1em auto;
+	}
+}
+
+//OFERTA
+.offert {
+	padding-bottom: 5em;
+	height: auto;
+	width: 100%;
+	background-color: $darkest;
+
+	.wrapper {
+		height: 100%;
+	}
+
+	&__center {
+		margin: 0 auto 0;
+		padding: 0 0 2em;
+		max-width: 100%;
+
+		&-card {
+			width: 260px;
+			height: 260px;
+			padding: 10px;
+			text-align: center;
+
+			h3 {
+				margin: 0 auto;
+				width: 90%;
+				padding-top: 1em;
+				color: $gray;
+			}
+			img {
+				width: 100%;
+				height: 65%;
+				border-radius: 25px;
+			}
+		}
+	}
+	&__brw {
+		margin-top: 2em;
+		padding: 2em 1em;
+		border: 2px solid $red;
+		border-radius: 25px;
+		background-color: $black;
+		&-text {
+			color: $gray;
+			font-size: 1.6rem;
+			text-align: center;
+
+			span {
+				color: $red;
+				font-weight: bold;
+			}
+			&--link a {
+				padding: 0.3em;
+				border-radius: 8px;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: $blue;
+				font-weight: bold;
+			}
+		}
+	}
+	&__description {
+		color: $gray;
+		text-align: center;
+
+		&--first {
+			.ti {
+				padding: 0.5em 0;
+				font-size: 5rem;
+				transition: color 0.3s;
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+		&--second {
+			.lni {
+				padding: 0 0.5em;
+				font-size: 5rem;
+				transition: color 0.3s;
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+
+		&-text {
+			padding-bottom: 2em;
+		}
+	}
+}
+
+// KONTAKT
+.contact {
+	width: 100%;
+	height: auto;
+	color: $gray;
+	background-color: $darkest;
+	text-align: center;
+
+	&__box {
+		width: 100%;
+
+		.ti {
+			font-size: 3.8rem;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+
+	&__box-adress {
+		p {
+			padding: 1.5em 0;
+		}
+	}
+	&__box-phone {
+		p {
+			padding: 0 0 0.4em;
+		}
+
+		p:nth-of-type(1) {
+			padding: 1.5em 0 0.4em;
+		}
+	}
+
+	&__box-mail {
+		margin-bottom: 3em;
+
+		p:nth-of-type(1) {
+			padding: 1.5em 0 0;
+		}
+	}
+
+	&__facebook a {
+		font-size: 4rem;
+		color: $gray;
+		text-decoration: none;
+
+		.lni {
+			padding: 0.2em 0 2em;
+		}
+	}
+}
+
+// GALERIA HANDLOWA HIT
+.shop-gallery {
+	position: relative;
+	height: auto;
+	width: 100%;
+	background-color: $darkest;
+	.section-title {
+		text-align: center;
+	}
+	.wrapper {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		.card {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 250px;
+			height: 200px;
+			margin: 1em 1em 3em;
+			background-color: $darkest;
+			border-radius: 25px;
+			border: 2px solid $red;
+
+			&__img {
+				display: none;
+				width: 100%;
+				height: 50%;
+				border-radius: 22px 22px 0 0;
+			}
+
+			&__body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				width: 100%;
+				height: 50%;
+				color: $gray;
+
+				h4 {
+					padding: 0 1em;
+					text-align: center;
+					font-size: 1.8rem;
+				}
+			}
+
+			&__text {
+				padding: 1em 0;
+			}
+
+			&__footer {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				bottom: 0;
+				width: 100%;
+				height: auto;
+				background-color: $darkest;
+				border-radius: 0 0 22px 22px;
+
+				.lni {
+					color: $gray;
+					font-size: 3.5rem;
+					transition: color 0.3s;
+
+					&:hover {
+						color: $blue;
+					}
+				}
+
+				a {
+					text-decoration: none;
+					color: $gray;
+					font-size: 3.5rem;
+					bottom: 10px;
+					.ti {
+						font-size: 3.5rem;
+						transition: color 0.3s;
+
+						&:hover {
+							color: $red;
+						}
+					}
+				}
+				&--www {
+					padding-right: 1em;
+				}
+			}
+		}
+	}
+}
+
+//FOOTER
+.footer {
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 60px;
+	font-size: 1.2rem;
+	color: $white;
+	background-color: $darker;
+
+	&__fb-button {
+		font-size: 2rem;
+		padding: 0.5em;
+		color: $gray;
+		&--link {
+			text-decoration: none;
+			color: $blue;
+		}
+	}
+}
+
+@import './utilities/extraSmall';
+@import './utilities/small';
+@import './utilities/medium';
+@import './utilities/large';
+@import './utilities/extraLarge';
+
+/*
+postion
+top/left/bottom/right
+display
+
+margin
+padding
+width
+height
+
+color
+bgc
+border
+
+font-size
+line-height
+
+transition
+cursor
+*/

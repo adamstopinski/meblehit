@@ -1,0 +1,61 @@
+$('.offert__center').slick({
+	arrows: false,
+	centerMode: true,
+	centerPadding: '60px',
+	autoplay: true,
+	autoplaySpeed: 4000,
+	infinite: true,
+	slidesToShow: 4,
+	arrows: true,
+	prevArrow: '<button class="slick-slider slick-prev"></button>',
+	nextArrow: '<button class="slick-slider slick-next"></button>',
+	responsive: [
+		{
+			breakpoint: 1000,
+			settings: {
+				arrows: true,
+				centerMode: true,
+				slidesToShow: 3,
+				autoplay: true,
+				infinite: true,
+				mobileFirst: true,
+			},
+		},
+		{
+			breakpoint: 800,
+			settings: {
+				arrows: true,
+				centerMode: true,
+				slidesToShow: 2,
+				autoplay: true,
+				infinite: true,
+				mobileFirst: true,
+			},
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				arrows: false,
+				centerMode: false,
+				slidesToShow: 2,
+				autoplay: true,
+				infinite: true,
+				mobileFirst: true,
+				dots: true,
+			},
+		},
+		{
+			breakpoint: 360,
+			settings: {
+				arrows: false,
+				centerMode: false,
+				centerPadding: '40px',
+				slidesToShow: 1,
+				autoplay: true,
+				infinite: true,
+				mobileFirst: true,
+				dots: true,
+			},
+		},
+	],
+})

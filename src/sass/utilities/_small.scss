@@ -1,0 +1,38 @@
+@media (min-width: 576px) {
+	//HEADER
+	.nav {
+		&__wrapper {
+			img {
+				height: 50px;
+				width: 60px;
+			}
+		}
+		&--active {
+			font-size: 2.5rem;
+		}
+	}
+	//O NAS
+	.about-us {
+		&__text {
+			font-size: 1.6rem;
+			text-align: center;
+
+			span {
+				font-size: 2rem;
+			}
+		}
+	}
+	//OFERTA
+	.offert {
+		&__brw {
+			margin-top: 5em;
+			padding: 3em 4em;
+		}
+
+		h3 {
+			padding-top: 1em;
+			color: $gray;
+		}
+	}
+	
+}
