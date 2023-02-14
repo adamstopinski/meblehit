@@ -45,7 +45,14 @@ const handleCurrentYear = () => {
 	footerYear.innerText = year
 }
 
-
+document.addEventListener('mousedown', function (event) {
+	if (event.button === 2) {
+		Swal.fire({
+			icon: 'error',
+			title: 'Wszystkie prawa zastrzeżone',
+		})
+	}
+})
 
 navBtn.addEventListener('click', handleNav)
 handleCurrentYear()
