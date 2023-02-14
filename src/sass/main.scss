@@ -237,12 +237,16 @@ hr {
 		border: 2px solid $red;
 		border-radius: 25px;
 		background-color: $gray;
-		text-align: left;
+		text-align: center;
 		overflow: hidden;
 
 		span {
 			font-weight: bold;
 			font-size: 1.6rem;
+		}
+
+		p {
+			text-align: justify;
 		}
 	}
 
