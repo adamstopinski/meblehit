@@ -323,6 +323,7 @@ hr {
 			.ti {
 				padding: 0.5em 0;
 				font-size: 5rem;
+				font-display: swap;
 				transition: color 0.3s;
 				&:hover {
 					color: $red;
@@ -333,6 +334,7 @@ hr {
 			.lni {
 				padding: 0 0.5em;
 				font-size: 5rem;
+				font-display: swap;
 				transition: color 0.3s;
 				&:hover {
 					color: $red;
@@ -359,6 +361,7 @@ hr {
 
 		.ti {
 			font-size: 3.8rem;
+			font-display: swap;
 			transition: color 0.3s;
 
 			&:hover {
@@ -396,6 +399,7 @@ hr {
 		text-decoration: none;
 
 		.lni {
+			font-display: swap;
 			padding: 0.2em 0 2em;
 		}
 	}
@@ -469,6 +473,7 @@ hr {
 				.lni {
 					color: $gray;
 					font-size: 3.5rem;
+					font-display: swap;
 					transition: color 0.3s;
 
 					&:hover {
@@ -483,6 +488,7 @@ hr {
 					bottom: 10px;
 					.ti {
 						font-size: 3.5rem;
+						font-display: swap;
 						transition: color 0.3s;
 
 						&:hover {
@@ -492,6 +498,7 @@ hr {
 				}
 				&--www {
 					padding-right: 1em;
+					font-display: swap;
 				}
 			}
 		}

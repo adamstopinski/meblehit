@@ -10,7 +10,6 @@ $('.offert__center').slick({
 		{
 			breakpoint: 1000,
 			settings: {
-				lazyLoad: 'ondemand',
 				arrows: true,
 				centerMode: true,
 				slidesToShow: 3,
@@ -20,7 +19,6 @@ $('.offert__center').slick({
 		{
 			breakpoint: 800,
 			settings: {
-				lazyLoad: 'ondemand',
 				arrows: true,
 				centerMode: true,
 				slidesToShow: 2,
@@ -30,7 +28,6 @@ $('.offert__center').slick({
 		{
 			breakpoint: 480,
 			settings: {
-				lazyLoad: 'ondemand',
 				arrows: false,
 				centerMode: false,
 				slidesToShow: 2,
@@ -41,7 +38,8 @@ $('.offert__center').slick({
 		{
 			breakpoint: 360,
 			settings: {
-				lazyLoad: 'ondemand',
+				speed: 500,
+				fade: true,
 				arrows: false,
 				centerMode: false,
 				centerPadding: '40px',
