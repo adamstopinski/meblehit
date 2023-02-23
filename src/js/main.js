@@ -7,13 +7,17 @@ const footerYear = document.querySelector('.footer__year')
 window.addEventListener('load', function () {
 	const arrowBtn = document.querySelector('.button')
 
-	window.addEventListener('scroll', function () {
-		if (window.scrollY >= 230) {
-			arrowBtn.style.display = 'block'
-		} else {
-			arrowBtn.style.display = 'none'
-		}
-	})
+	window.addEventListener(
+		'scroll',
+		function () {
+			if (window.scrollY >= 230) {
+				arrowBtn.style.display = 'block'
+			} else {
+				arrowBtn.style.display = 'none'
+			}
+		},
+		{ passive: true }
+	)
 })
 
 const handleNav = () => {
@@ -45,15 +49,6 @@ const handleCurrentYear = () => {
 	footerYear.innerText = year
 }
 
-// document.addEventListener('mousedown', function (event) {
-// 	if (event.button === 2) {
-// 		Swal.fire({
-// 			icon: 'error',
-// 			title: 'Wszystkie prawa zastrzeżone',
-// 		})
-// 	}
-// })
-
-navBtn.addEventListener('click', handleNav)
+navBtn.addEventListener('click', handleNav, { passive: true })
 handleCurrentYear()
 hideNav()

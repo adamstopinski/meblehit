@@ -1,10 +1,7 @@
 $('.offert__center').slick({
-	arrows: false,
+	lazyLoad: 'ondemand',
 	centerMode: true,
 	centerPadding: '60px',
-	autoplay: true,
-	autoplaySpeed: 4000,
-	infinite: true,
 	slidesToShow: 4,
 	arrows: true,
 	prevArrow: '<button class="slick-slider slick-prev"></button>',
@@ -13,33 +10,30 @@ $('.offert__center').slick({
 		{
 			breakpoint: 1000,
 			settings: {
+				lazyLoad: 'ondemand',
 				arrows: true,
 				centerMode: true,
 				slidesToShow: 3,
-				autoplay: true,
-				infinite: true,
 				mobileFirst: true,
 			},
 		},
 		{
 			breakpoint: 800,
 			settings: {
+				lazyLoad: 'ondemand',
 				arrows: true,
 				centerMode: true,
 				slidesToShow: 2,
-				autoplay: true,
-				infinite: true,
 				mobileFirst: true,
 			},
 		},
 		{
 			breakpoint: 480,
 			settings: {
+				lazyLoad: 'ondemand',
 				arrows: false,
 				centerMode: false,
 				slidesToShow: 2,
-				autoplay: true,
-				infinite: true,
 				mobileFirst: true,
 				dots: true,
 			},
@@ -47,12 +41,11 @@ $('.offert__center').slick({
 		{
 			breakpoint: 360,
 			settings: {
+				lazyLoad: 'ondemand',
 				arrows: false,
 				centerMode: false,
 				centerPadding: '40px',
 				slidesToShow: 1,
-				autoplay: true,
-				infinite: true,
 				mobileFirst: true,
 				dots: true,
 			},
