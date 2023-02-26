@@ -4,8 +4,8 @@ $('.offert__center').slick({
 	centerPadding: '60px',
 	slidesToShow: 4,
 	arrows: true,
-	prevArrow: '<button class="slick-slider slick-prev"></button>',
-	nextArrow: '<button class="slick-slider slick-next"></button>',
+	prevArrow: '<button class="slick-slider slick-prev" aria-label="Przycisk przesuwający ofertę w lewo"></button>',
+	nextArrow: '<button class="slick-slider slick-next" aria-label="Przycisk przesuwający ofertę w prawo"></button>',
 	responsive: [
 		{
 			breakpoint: 1000,
